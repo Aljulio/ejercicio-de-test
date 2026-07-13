@@ -14,7 +14,20 @@
 
 ---
 
-##  Pruebas Ejecutadas Correctamente
+## 🧪 Pruebas Ejecutadas Correctamente
 A continuación se detalla la evidencia de los 3 tests configurados y ejecutándose con éxito en el sistema:
 
-![Pruebas Pasando](./screenshot-tests.png)
+### Evidencia 1: Consola con los tests exitosos
+![Pruebas Pasando 1](./screenshot-tests.png)
+
+### Evidencia 2
+![Pruebas Pasando 2](./screenshot-tests2.png)
+
+### Evidencia 3
+![Pruebas Pasando 3](./screenshot-tests3.png)
+
+### Evidencia 4
+![Pruebas Pasando 4](./screenshot-tests4.png)
+
+### Evidencia 5
+![Pruebas Pasando 5](./screenshot-tests5.png)
