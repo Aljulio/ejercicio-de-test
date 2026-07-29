@@ -14,7 +14,7 @@
 
 ---
 
-## 🧪 Pruebas Ejecutadas Correctamente
+##  Pruebas Ejecutadas Correctamente
 A continuación se detalla la evidencia de los 3 tests configurados y ejecutándose con éxito en el sistema:
 
 ### Evidencia 1: Consola con los tests exitosos
@@ -38,7 +38,7 @@ A continuación se detalla la evidencia de los 3 tests configurados y ejecutánd
 * **Script de Pruebas:** `tests/clase02.spec.ts`
 * **Carpeta de Capturas:** `evidencias/`
 
-## 📝 Reflexión: Auto-wait vs. Sleep() en Playwright
+##  Reflexión: Auto-wait vs. Sleep() en Playwright
 
 ### 1. Auto-wait (Mecanismo Nativo de Playwright)
 Playwright implementa un sistema de **esperas automáticas (auto-waiting)** que verifica que los elementos cumplan con ciertas condiciones de accionabilidad (que sean visibles, estables, reciban eventos y estén habilitados) antes de realizar acciones como `.click()`, `.fill()`, etc.
@@ -60,14 +60,14 @@ El uso de pausas explícitas o forzadas (como `setTimeout` o `page.waitForTimeou
 
 ---
 
-### 💡 Conclusión
+###  Conclusión
 El uso de **Auto-wait** y métodos de espera explícitos basados en eventos/selectores (como `page.waitForURL()` o `page.waitForSelector()`) garantiza suites de pruebas ágiles, deterministas y resistentes a variaciones de rendimiento en el entorno de pruebas, superando completamente las prácticas obsoletas de pausas fijas con `sleep()`.
 
 
 ---
 
-# 📌 Clase 03: Locators y Casos de Prueba
+#  Clase 03: Locators y Casos de Prueba
 
-### 📂 Archivos agregados
+###  Archivos agregados
 * **Pruebas Automatizadas:** `tests/clase03.spec.ts` (6 tests de clase + 3 tests reto)
 * **Caso de Prueba Documentado:** `casos-de-prueba/TC-001.md`
