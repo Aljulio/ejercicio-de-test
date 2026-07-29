@@ -62,3 +62,12 @@ El uso de pausas explícitas o forzadas (como `setTimeout` o `page.waitForTimeou
 
 ### 💡 Conclusión
 El uso de **Auto-wait** y métodos de espera explícitos basados en eventos/selectores (como `page.waitForURL()` o `page.waitForSelector()`) garantiza suites de pruebas ágiles, deterministas y resistentes a variaciones de rendimiento en el entorno de pruebas, superando completamente las prácticas obsoletas de pausas fijas con `sleep()`.
+
+
+---
+
+# 📌 Clase 03: Locators y Casos de Prueba
+
+### 📂 Archivos agregados
+* **Pruebas Automatizadas:** `tests/clase03.spec.ts` (6 tests de clase + 3 tests reto)
+* **Caso de Prueba Documentado:** `casos-de-prueba/TC-001.md`
