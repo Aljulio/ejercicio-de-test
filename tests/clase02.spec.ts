@@ -1,10 +1,10 @@
 import { test, expect } from '@playwright/test';
 import * as fs from 'fs';
 
-// Crear carpeta para evidencias si no existe
+// Crear carpeta para evidencias de esta clase si no existe
 test.beforeAll(() => {
-  if (!fs.existsSync('./evidencias')) {
-    fs.mkdirSync('./evidencias');
+  if (!fs.existsSync('./evidencias/clase02')) {
+    fs.mkdirSync('./evidencias/clase02', { recursive: true });
   }
 });
 
@@ -16,7 +16,7 @@ test.describe('Clase 02 - Navegación y esperas en DemoBlaze', () => {
         await expect(page).toHaveURL(/demoblaze/);
 
         await page.screenshot({
-        path: './evidencias/01-pagina-inicio.png',
+        path: './evidencias/clase02/01-pagina-inicio.png',
         fullPage: true
         });
 
@@ -27,7 +27,7 @@ test.describe('Clase 02 - Navegación y esperas en DemoBlaze', () => {
         await expect(page).toHaveURL(/cart/);
 
         await page.screenshot({
-        path: './evidencias/02-carrito-vacio.png',
+        path: './evidencias/clase02/02-carrito-vacio.png',
         fullPage: true
         });
 
@@ -54,7 +54,7 @@ test.describe('Clase 02 - Navegación y esperas en DemoBlaze', () => {
         await page.waitForLoadState('domcontentloaded');
 
         await page.screenshot({
-            path: './evidencias/03-detalle-producto.png',
+            path: './evidencias/clase02/03-detalle-producto.png',
             fullPage: true
         });
 
@@ -69,18 +69,18 @@ test.describe('Clase 02 - Navegación y esperas en DemoBlaze', () => {
 
     const navbar = page.locator('#navbarExample');
     await navbar.screenshot({
-        path: './evidencias/04-navbar.png'
+        path: './evidencias/clase02/04-navbar.png'
     });
 
     // DemoBlaze usa una etiqueta <footer> real con la clase "py-5 bg-inverse"
     const footer = page.locator('footer');
     await footer.scrollIntoViewIfNeeded();
     await footer.screenshot({
-        path: './evidencias/05-footer.png'
+        path: './evidencias/clase02/05-footer.png'
     });
 });
 
-    
+
     test('Verificar tiempo de carga de la página', async ({ page }) => {
         const startTime = Date.now();
 
@@ -91,9 +91,15 @@ test.describe('Clase 02 - Navegación y esperas en DemoBlaze', () => {
 
         console.log(`Tiempo de carga: ${loadTime}ms`);
 
+        // Evidencia: la página ya cargada por completo
+        await page.screenshot({
+            path: './evidencias/clase02/06-pagina-cargada.png',
+            fullPage: true
+        });
+
         // La página debería cargar en menos de 10 segundos
         expect(loadTime).toBeLessThan(10000);
- });        
+ });
 
 
 });

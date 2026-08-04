@@ -71,3 +71,13 @@ El uso de **Auto-wait** y métodos de espera explícitos basados en eventos/sele
 ###  Archivos agregados
 * **Pruebas Automatizadas:** `tests/clase03.spec.ts` (6 tests de clase + 3 tests reto)
 * **Caso de Prueba Documentado:** `casos-de-prueba/TC-001.md`
+
+
+---
+
+#  Clase 04: Principios de Pruebas (ISTQB) + Actions en Playwright
+
+###  Archivos agregados
+* **Pruebas Automatizadas:** `tests/clase04.spec.ts` (4 tests de clase + 3 tests reto)
+* **Evidencias:** `evidencias/clase04/` (capturas de cada test)
+* **Reflexión escrita:** `tareas/tarea-04.md` (¿cuál de los 7 principios ISTQB es más importante y por qué?)
