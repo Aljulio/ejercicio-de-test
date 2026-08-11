@@ -81,3 +81,11 @@ El uso de **Auto-wait** y métodos de espera explícitos basados en eventos/sele
 * **Pruebas Automatizadas:** `tests/clase04.spec.ts` (4 tests de clase + 3 tests reto)
 * **Evidencias:** `evidencias/clase04/` (capturas de cada test)
 * **Reflexión escrita:** `tareas/tarea-04.md` (¿cuál de los 7 principios ISTQB es más importante y por qué?)
+
+---
+
+# Clase 05: Técnicas Tradicionales del Diseño de Pruebas + Assertions
+
+### Archivos agregados
+* **Pruebas Automatizadas:** `tests/clase05.spec.ts` (10 tests base + 3 tests reto de la Tarea 05)
+* **Tabla de Decisión:** `casos-de-prueba/tabla-decision-checkout.md` (4 condiciones y 6 reglas documentadas)
