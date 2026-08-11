@@ -223,7 +223,6 @@ test.describe('Clase 05 - Flujo de login y assertions en Sauce Demo', () => {
     });
   });
 
-  // --- TESTS RETO (TAREA 05) ---
 
   test('Reto 1: toHaveValue() - Ordenar por precio y verificar selección y primer valor', async ({ page }) => {
     await page.goto('https://www.saucedemo.com');
