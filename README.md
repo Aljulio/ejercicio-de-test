@@ -89,3 +89,17 @@ El uso de **Auto-wait** y métodos de espera explícitos basados en eventos/sele
 ### Archivos agregados
 * **Pruebas Automatizadas:** `tests/clase05.spec.ts` (10 tests base + 3 tests reto de la Tarea 05)
 * **Tabla de Decisión:** `casos-de-prueba/tabla-decision-checkout.md` (4 condiciones y 6 reglas documentadas)
+
+---
+
+# Clase 06: Testing Estratégico y Ágil + Page Object Model (POM)
+
+### Archivos agregados
+* **Carpeta Page Objects:** `pages/` (Contiene `LoginPage.ts`, `InventoryPage.ts`, `CartPage.ts` + 2 nuevos objetos de la Tarea 06)
+* **Pruebas Automatizadas:** `tests/clase06.spec.ts` (5 tests base + 3 tests reto, todos pasando correctamente)
+
+### Instrucciones de Ejecución
+Para ejecutar únicamente los tests implementados con el patrón POM de esta clase, corre el siguiente comando en la terminal:
+
+```bash
+npx playwright test tests/clase06.spec.ts
