@@ -103,3 +103,34 @@ Para ejecutar únicamente los tests implementados con el patrón POM de esta cla
 
 ```bash
 npx playwright test tests/clase06.spec.ts
+
+---
+````
+
+# Clase 07: Roles del Equipo QA + Error, Defecto y Fallo + Atributos de Calidad (ISO/IEC 25010)
+
+### Archivos agregados
+* **Pruebas Automatizadas:** `tests/clase07.spec.ts` (4 tests de evidencias, todos pasando correctamente)
+* **Tests Reto:** `tests/tarea07.spec.ts` (3 tests reto de la Tarea 07 — `test.step()`, `testInfo.attach()` y `toHaveScreenshot()`)
+* **Evidencias:** `evidencias/clase07/` (8 capturas: login antes/después, flujo de compra, defecto de usuario bloqueado y comparación de estados)
+* **Baseline visual:** `tests/tarea07.spec.ts-snapshots/` (imagen de referencia generada por `toHaveScreenshot()`)
+* **Reporte de Defecto:** `reportes/DR-001.md` (defecto simulado documentado con evidencia real del reporte HTML y el Trace Viewer)
+
+### Instrucciones de Ejecución
+Para ejecutar los tests de evidencias de esta clase:
+
+```bash
+npx playwright test tests/clase07.spec.ts
+```
+
+Para ejecutar los 3 tests reto de la Tarea 07:
+
+```bash
+npx playwright test tests/tarea07.spec.ts
+```
+
+Para revisar el reporte HTML con capturas, video y trace de cada test:
+
+```bash
+npx playwright show-report
+```
