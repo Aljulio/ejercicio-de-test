@@ -134,3 +134,8 @@ Para revisar el reporte HTML con capturas, video y trace de cada test:
 ```bash
 npx playwright show-report
 ```
+###  Configuración Global de Evidencias (`playwright.config.ts`)
+Se configuró el entorno para capturar evidencias automáticas durante la ejecución:
+* **Ejecución Visible:** `headless: false` con desaceleración visual de 500ms (`slowMo`).
+* **Capturas y Video:** Captura de pantallas (`screenshot: 'on'`) y grabación de video en resolución 1280x720 (`video: 'on'`).
+* **Trazabilidad:** Rastreo habilitado (`trace: 'on'`) para análisis detallado post-ejecución.
