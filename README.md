@@ -139,3 +139,45 @@ Se configuró el entorno para capturar evidencias automáticas durante la ejecuc
 * **Ejecución Visible:** `headless: false` con desaceleración visual de 500ms (`slowMo`).
 * **Capturas y Video:** Captura de pantallas (`screenshot: 'on'`) y grabación de video en resolución 1280x720 (`video: 'on'`).
 * **Trazabilidad:** Rastreo habilitado (`trace: 'on'`) para análisis detallado post-ejecución.
+
+# Clase 08: Hooks y Suites Avanzadas en Playwright
+
+### Archivos agregados
+
+* **Pruebas Automatizadas:** `tests/clase08.spec.ts` (7 tests, todos pasando correctamente)
+* **Tests Reto:** `tests/tarea08.spec.ts` (3 tests reto)
+* **Helper de autenticación:** `helpers/auth.ts` (función reutilizable `loginAs()`)
+* **Evidencias:** `evidencias/clase08/` y `evidencias/tarea08/`
+* **SQA Plan:** `documentos/sqa-plan-saucedemo.md` y evidencia escrita a mano
+
+### Funcionalidades implementadas
+
+* **Hooks:** `beforeEach()` para login automático y `afterEach()` para capturar evidencias de fallos.
+* **Suites:** ejecución en modo `parallel` y `serial`.
+* **Página compartida:** reutilización de una misma página mediante `beforeAll()`.
+* **`test.slow()`:** aplicado al usuario `performance_glitch_user`.
+* **`test.skip()` dinámico:** se implementó una condición mediante variable de entorno y se documentó la razón de la omisión.
+* **Pruebas:** inventario, precios, imágenes, menú, logout, checkout y comportamiento de diferentes usuarios.
+* **SQA Plan:** se documentaron propósito, alcance, herramientas y criterios de salida.
+
+### Instrucciones de Ejecución
+
+Para ejecutar los tests de la clase 08:
+
+```bash
+npx playwright test tests/clase08.spec.ts
+```
+
+Para ejecutar los 3 tests reto de la Tarea 08:
+
+```bash
+npx playwright test tests/tarea08.spec.ts
+```
+
+### Evidencia de ejecución
+
+El `test.skip()` dinámico fue comprobado mediante:
+
+```powershell
+$env:SKIP_RETO_3="true"; npx playwright test tests/tarea08.spec.ts
+```
