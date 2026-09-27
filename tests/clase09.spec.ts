@@ -8,7 +8,6 @@ test.beforeAll(() => {
   }
 });
 
-// ================== PASO 2 - Usando los fixtures ==================
 test.describe('Clase 09 - Fixtures y datos de prueba', () => {
 
   test.afterEach(async ({ page }, testInfo) => {
@@ -87,8 +86,6 @@ test.describe('Clase 09 - Fixtures y datos de prueba', () => {
   });
 
 });
-
-// ================== PASO 3 - Tests parametrizados de login ==================
 // Datos de prueba para diferentes usuarios
 const usuariosDeLogin = [
   {
@@ -174,7 +171,6 @@ baseTest.describe('Clase 09 - Tests parametrizados de login', () => {
 
 });
 
-// ================== PASO 3 - Productos del carrito parametrizados ==================
 const productosAVerificar = [
   'Sauce Labs Backpack',
   'Sauce Labs Bike Light',
