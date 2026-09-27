@@ -181,3 +181,34 @@ El `test.skip()` dinámico fue comprobado mediante:
 ```powershell
 $env:SKIP_RETO_3="true"; npx playwright test tests/tarea08.spec.ts
 ```
+
+---
+
+# Clase 09: Automatización de Pruebas + Fixtures y Datos Parametrizados en Playwright
+
+### Archivos agregados
+* **Pruebas de Clase:** `tests/clase09.spec.ts` (9 tests base parametrizados ejecutándose en verde)
+* **Pruebas del Reto:** `tests/tarea09.spec.ts` (6 tests reto con técnicas avanzadas de fixtures)
+
+### Retos de Fixtures Avanzados Implementados
+1. **Reto 1 — Fixture con teardown real:** Implementación de un cronómetro en el setup del fixture, ejecutando el teardown después de `use()` para medir e imprimir la duración total del test (incluso si falla).
+2. **Reto 2 — Fixture de alcance worker:** Fixture con `{ scope: 'worker' }` que mantiene el estado persistente (contador incrementando de 1 a 2) entre pruebas ejecutadas por el mismo worker.
+3. **Reto 3 — test.use() + parametrización:** Combinación de `test.use({ viewport })` mediante un bucle de iteración para evaluar la prueba en entornos móvil y de escritorio.
+
+### Instrucciones de Ejecución
+
+Los comandos están separados: ejecuta únicamente la clase o únicamente la tarea según lo que quieras revisar.
+
+#### Ejecutar los tests de la Clase 09
+
+```bash
+# Ejecutar tests de la clase
+npx playwright test tests/clase09.spec.ts --reporter=list
+```
+
+#### Ejecutar los tests de la Tarea 09
+
+```bash
+# Ejecutar tests de la tarea / retos
+npx playwright test tests/tarea09.spec.ts --reporter=list
+```

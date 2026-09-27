@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test:clase09": "playwright test tests/clase09.spec.ts --reporter=list",
+    "test:tarea09": "playwright test tests/tarea09.spec.ts --reporter=list"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
