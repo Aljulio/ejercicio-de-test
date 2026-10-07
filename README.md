@@ -212,3 +212,117 @@ npx playwright test tests/clase09.spec.ts --reporter=list
 # Ejecutar tests de la tarea / retos
 npx playwright test tests/tarea09.spec.ts --reporter=list
 ```
+
+# Clase 10: Pruebas Manuales vs. Automatización + Multi-browser y Tags
+
+### Archivos agregados
+
+- **Configuración multi-browser:** `playwright.config.ts`
+- **Pruebas Smoke:** `tests/clase10-smoke.spec.ts`
+- **Pruebas Regression:** `tests/clase10-regression.spec.ts`
+- **Pruebas de la Tarea 10:** `tests/tarea10.spec.ts`
+- **Evidencias:** `evidencias/clase10/` y `evidencias/tarea10/`
+
+### Configuración Multi-browser
+
+Se configuraron 5 proyectos para ejecutar las pruebas en diferentes navegadores y dispositivos:
+
+- Chromium
+- Firefox
+- WebKit
+- Mobile Chrome
+- Mobile Safari
+
+---
+
+## 1. Pruebas Smoke
+
+Se implementaron 5 pruebas Smoke para verificar las funcionalidades principales de Sauce Demo:
+
+- Carga de la página de login.
+- Login con usuario estándar.
+- Visualización de productos en el inventario.
+- Acceso al carrito.
+- Inicio del proceso de checkout.
+
+### Ejecución
+
+Para ejecutar las pruebas Smoke:
+
+```bash
+npx playwright test tests/clase10-smoke.spec.ts
+```
+
+---
+
+## 2. Pruebas Regression
+
+Se implementaron 5 pruebas Regression para verificar diferentes funcionalidades del inventario:
+
+- Ordenamiento de productos A-Z.
+- Ordenamiento de productos Z-A.
+- Ordenamiento de precios de menor a mayor.
+- Comportamiento del botón "Add to cart" / "Remove".
+- Navegación al detalle del producto y regreso al inventario.
+
+### Ejecución
+
+Para ejecutar las pruebas Regression:
+
+```bash
+npx playwright test tests/clase10-regression.spec.ts
+```
+
+---
+
+## 3. Tarea 10 - Tests reto
+
+Se implementaron los 3 retos solicitados en la tarea de la Clase 10.
+
+### Reto 1: Tags múltiples + `--grep-invert`
+
+Se utilizaron múltiples tags en los tests para clasificarlos y permitir la selección o exclusión de pruebas mediante los parámetros de Playwright.
+
+Tags utilizados:
+
+- `@regression`
+- `@ui`
+- `@cart`
+- `@soft`
+- `@cross-browser`
+
+### Reto 2: `expect.soft()`
+
+Se utilizaron soft assertions para verificar diferentes atributos del primer producto sin detener inmediatamente la ejecución ante el primer fallo.
+
+También se utilizó `testInfo.errors` para consultar los errores acumulados durante las soft assertions.
+
+### Reto 3: Fixture `browserName`
+
+Se utilizó el fixture `browserName` para identificar el motor real del navegador utilizado durante la ejecución.
+
+Se realizaron verificaciones específicas para:
+
+- Chromium
+- Firefox
+- WebKit
+
+También se verificó funcionalmente el ordenamiento de precios de mayor a menor.
+
+### Ejecución
+
+Para ejecutar los tests de la Tarea 10:
+
+```bash
+npx playwright test tests/tarea10.spec.ts
+```
+
+## Reporte HTML
+
+Para visualizar el reporte HTML generado por Playwright:
+
+```bash
+npx playwright show-report
+```
+
+El reporte HTML permite visualizar los resultados de las pruebas, su estado de ejecución y los diferentes proyectos utilizados.
