@@ -326,3 +326,83 @@ npx playwright show-report
 ```
 
 El reporte HTML permite visualizar los resultados de las pruebas, su estado de ejecución y los diferentes proyectos utilizados.
+
+---
+
+# Clase 11: Gestión de Bugs, Reportes HTML y GitHub Issues
+
+## Archivos agregados
+
+- **Pruebas del laboratorio:** `tests/clase11.spec.ts` (9 pruebas automatizadas).
+- **Pruebas de la tarea:** `tests/tarea11.spec.ts` (3 retos de gestión de bugs).
+- **Reporte del defecto:** `reportes/bug-report-clase11.md` (documentación del defecto conocido BUG-001).
+- **Issue en GitHub:** [BUG-001 — Dos imágenes no cargan correctamente en la página Broken Images](https://github.com/Aljulio/ejercicio-de-test/issues/1).
+- **Evidencias del laboratorio:** `evidencias/clase11/` (capturas de las pruebas automatizadas).
+- **Evidencias de la tarea:** `evidencias/tarea11/` (capturas de la frecuencia del defecto de texto, de la página Broken Images y del borrador del reporte generado).
+
+## Funcionalidades implementadas
+
+- **Reporte HTML:** generación del reporte de Playwright para consultar los resultados de las pruebas automatizadas.
+- **Adjuntos y evidencias:** incorporación de capturas de pantalla y datos adicionales mediante `testInfo.attach()`.
+- **Anotaciones:** documentación de defectos conocidos mediante `test.info().annotations`.
+- **Etiquetas:** clasificación de pruebas mediante `@smoke` y `@bug`.
+- **Detección de imágenes rotas:** identificación de imágenes que no cargan correctamente mediante aserciones sobre la propiedad `naturalWidth`.
+- **Gestión de defectos:** registro del defecto BUG-001 en GitHub Issues con la etiqueta `bug`.
+- **Frecuencia del defecto de texto:** ejecución repetida de la página `/typos` para identificar errores de escritura y calcular su frecuencia observada.
+- **Generación de borrador de reporte:** creación de un borrador en formato Markdown con información de la prueba, el navegador, la URL y el error obtenido. El borrador se adjunta al reporte HTML de Playwright.
+
+## Instrucciones de ejecución
+
+Para ejecutar las pruebas del laboratorio en Firefox:
+
+```bash
+npx playwright test tests/clase11.spec.ts --project=firefox
+```
+
+Para ejecutar los tres retos de la tarea en Firefox:
+
+```bash
+npx playwright test tests/tarea11.spec.ts --project=firefox
+```
+
+Para ejecutar únicamente el reto de frecuencia del defecto de texto:
+
+```bash
+npx playwright test tests/tarea11.spec.ts --project=firefox --grep "Reto 1"
+```
+
+Para visualizar el reporte HTML generado por Playwright:
+
+```bash
+npx playwright show-report
+```
+
+## Reporte del defecto BUG-001
+
+El defecto identificado corresponde a imágenes que no cargan correctamente en la página Broken Images de Practice Test Automation.
+
+- **Identificador:** BUG-001.
+- **Severidad propuesta:** Media.
+- **Prioridad propuesta:** P3.
+- **Estado:** Abierto.
+- **Reporte Markdown:** `reportes/bug-report-clase11.md`.
+- **Registro en GitHub:** [Consultar Issue #1](https://github.com/Aljulio/ejercicio-de-test/issues/1).
+- **Evidencia visual del laboratorio:** `evidencias/clase11/10_reporte_html_bug001.png`.
+- **Evidencia visual de la tarea:** `evidencias/tarea11/03_borrador_bug001.png`.
+- **Evidencia del adjunto en el reporte HTML:** `evidencias/tarea11/04_adjunto_reporte_bug001.png`.
+
+El reporte documenta la descripción del defecto, los pasos para reproducirlo, el resultado esperado, el resultado obtenido y las evidencias de la ejecución automatizada.
+
+## Resultados de la tarea 11
+
+Los tres retos se ejecutaron en Firefox. Los resultados obtenidos durante la última ejecución fueron los siguientes:
+
+| Reto | Resultado | Descripción |
+|---|---|---|
+| Reto 1: medir la frecuencia del defecto de texto | Aprobado | Se realizaron 12 ejecuciones para identificar la presencia del error de escritura. |
+| Reto 2: texto sin errores ortográficos | Omitido | La prueba permanece pendiente mediante `test.fixme()`. |
+| Reto 3: generar borrador de reporte de un defecto | Fallo esperado | Se detectó el defecto conocido de las imágenes que no cargan y se generó un borrador adjunto al reporte HTML. |
+
+La frecuencia del defecto de texto puede variar entre ejecuciones porque el error aparece aleatoriamente en la página de práctica. En cada corrida se registran las apariciones detectadas y el total de ejecuciones realizadas.
+
+El Reto 2 permanece pendiente de activación, mientras que el Reto 3 permite documentar el defecto conocido mediante el resultado de la prueba y el borrador adjunto al reporte HTML.
